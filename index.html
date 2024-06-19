@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>テキストスタイル変換+TTS サンプル音声</title>
+    <style>
+        .table-title {
+            font-size: 24px;
+            /* タイトルのフォントサイズ */
+            margin-left: 20px;
+            /* 左の余白 */
+        }
+
+        /* 表のスタイル */
+        table {
+            width: 70%;
+            /* 表の幅 */
+            table-layout: fixed;
+            border-collapse: collapse;
+            /* セルの境界線を一つに */
+            margin: 20px;
+            /* 上下の余白と自動で中央寄せ */
+            margin-left: 0;
+            /* 左の余白をなしに */
+        }
+
+        th,
+        td {
+            border: 1px solid #888;
+            /* 罫線の色 */
+            padding: 10px;
+            /* セルの内側の余白 */
+            text-align: center;
+            /* テキストを中央揃え */
+        }
+
+        th {
+            background-color: #f2f2f2;
+            /* ヘッダーの背景色 */
+        }
+
+        .col-title {
+            width: 20%;
+            /* タイトル列の幅 */
+        }
+
+        /* 音声コントロールのスタイル */
+        audio {
+            width: 100%;
+            /* 音声コントロールの幅をセルに合わせる */
+            outline: none;
+            /* アウトラインを消す */
+        }
+    </style>
+</head>
+
+<body>
+    <p>ASJ2024S 1-Q-28　<a href="https://www.mtg.acoustics.jp/abst/1-Q-28.jpg" target="_blank">Abstruct</a></p>
+    <p>Audio samples from VITS and CycleCVAE+Attn+CWAPE </p>
+
+
+    <div class="table-title">Disfluency　Audio samples</div>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="col-title">Sample</th>
+                <th>Audio file 1</th>
+                <th>Audio file 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ori.（Fluent）</td>
+                <td><audio controls>
+                        <source src="wav\disflu\Ori\csj_0006.wav" type="audio/wav">Your browser does not support the
+                        audio element.
+                    </audio></td>
+                <td><audio controls>
+                        <source src="wav\disflu\Ori\csj_0001.wav" type="audio/wav">Your browser does not support the
+                        audio element.
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>Trans.（Disfluent）</td>
+                <td><audio controls>
+                        <source src="wav\disflu\Trans\csj_0006.wav" type="audio/wav">Your browser does not support the
+                        audio element.
+                    </audio></td>
+                <td><audio controls>
+                        <source src="wav\disflu\Trans\csj_0001.wav" type="audio/wav">Your browser does not support the
+                        audio element.
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>Ref.（Disfluent）</td>
+                <td><audio controls>
+                        <source src="wav\disflu\Ref\csj_0006.wav" type="audio/wav">Your browser does not support the
+                        audio element.
+                    </audio></td>
+                <td><audio controls>
+                        <source src="wav\disflu\Ref\csj_0001.wav" type="audio/wav">Your browser does not support the
+                        audio element.
+                    </audio></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="table-title">Spoken/Written　Audio samples</div>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="col-title">Sample</th>
+                <th>Audio file 1</th>
+                <th>Audio file 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ori.（Written）</td>
+                <td><audio controls>
+                        <source src="wav\sw\written\tts_0001.wav" type="audio/wav">Your browser does not support the
+                        audio element.
+                    </audio></td>
+                <td><audio controls>
+                        <source src="wav\sw\written\tts_0004.wav" type="audio/wav">Your browser does not support the
+                        audio element.
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>Trans.（Spoken）</td>
+                <td><audio controls>
+                        <source src="wav\sw\spoken\tts_0001.wav" type="audio/wav">Your browser does not support the
+                        audio element.
+                    </audio></td>
+                <td><audio controls>
+                        <source src="wav\sw\spoken\tts_0004.wav" type="audio/wav">Your browser does not support the
+                        audio element.
+                    </audio></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
