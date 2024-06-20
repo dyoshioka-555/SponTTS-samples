@@ -7,168 +7,186 @@
     <style>
         .table-title {
             font-size: 24px;
-            /* タイトルのフォントサイズ */
             margin-left: 20px;
-            /* 左の余白 */
         }
 
-        /* 表のスタイル */
         table {
             width: 70%;
-            /* 表の幅 */
             table-layout: fixed;
             border-collapse: collapse;
-            /* セルの境界線を一つに */
             margin: 20px;
-            /* 上下の余白と自動で中央寄せ */
             margin-left: 0;
-            /* 左の余白をなしに */
         }
 
         th,
         td {
             border: 1px solid #888;
-            /* 罫線の色 */
             padding: 10px;
-            /* セルの内側の余白 */
             text-align: center;
-            /* テキストを中央揃え */
         }
 
         th {
             background-color: #f2f2f2;
-            /* ヘッダーの背景色 */
         }
 
         .col-title {
             width: 20%;
-            /* タイトル列の幅 */
         }
 
-        /* 音声コントロールのスタイル */
         audio {
             width: 100%;
-            /* 音声コントロールの幅をセルに合わせる */
             outline: none;
-            /* アウトラインを消す */
         }
     </style>
 </head>
 
 <body>
-    <p>ASJ2024S 1-Q-28　<a href="https://www.mtg.acoustics.jp/abst/1-Q-28.jpg" target="_blank">Abstruct</a></p>
-    <p>Audio samples from VITS and CycleCVAE+Attn+CWAPE </p>
+    <p>Audio samples from VITS and DVT</p>
 
+
+    <button id="prevButton">戻る</button>
+    <button id="nextButton">進む</button>
 
     <div class="table-title">DVT Audio samples</div>
+    <div id="displayTextDVT"></div>
 
     <table>
         <thead>
             <tr>
                 <th class="col-title">Sample</th>
-                <th>Audio file 1</th>
-                <th>Audio file 2</th>
+                <th>Audio file</th>
             </tr>
         </thead>
         <tbody>
             <tr>
+                <td>GT</td>
+                <td><audio controls>
+                        <source class="gt-audio-0" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+            </tr>
+            <tr>
                 <td>Plain-365k</td>
                 <td><audio controls>
-                        <source src="wav\20240604-csj-pred\wav-365k\A01M0565_0019636_0028888.wav" type="audio/wav">Your
-                        browser does not support the
-                        audio element.
-                    </audio></td>
-                <td><audio controls>
-                        <source src="wav\20240604-csj-pred\wav-365k\A01M0906_0094625_0098470.wav" type="audio/wav">Your
-                        browser does not support the
-                        audio element.
+                        <source class="dvt-audio-0" type="audio/wav">
+                        Your browser does not support the audio element.
                     </audio></td>
             </tr>
             <tr>
                 <td>Plain-658k</td>
                 <td><audio controls>
-                        <source src="wav\20240604-csj-pred\wav-658k\A01M0565_0019636_0028888.wav" type="audio/wav">Your
-                        browser does not support the
-                        audio element.
-                    </audio></td>
-                <td><audio controls>
-                        <source src="wav\20240604-csj-pred\wav-658k\A01M0906_0094625_0098470.wav" type="audio/wav">Your
-                        browser does not support the
-                        audio element.
+                        <source class="dvt-audio-1" type="audio/wav">
+                        Your browser does not support the audio element.
                     </audio></td>
             </tr>
             <tr>
                 <td>Plain-830k</td>
                 <td><audio controls>
-                        <source src="wav\20240604-csj-pred\wav-830k\A01M0565_0019636_0028888.wav" type="audio/wav">Your
-                        browser does not support the
-                        audio element.
+                        <source class="dvt-audio-2" type="audio/wav">
+                        Your browser does not support the audio element.
                     </audio></td>
+            </tr>
+            <tr>
+                <td>AutoDF-590k</td>
                 <td><audio controls>
-                        <source src="wav\20240604-csj-pred\wav-830k\A01M0906_0094625_0098470.wav" type="audio/wav">Your
-                        browser does not support the
-                        audio element.
+                        <source class="dvt_f-audio-0" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>AutoDF-755k</td>
+                <td><audio controls>
+                        <source class="dvt_f-audio-1" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>AutoDF-818k</td>
+                <td><audio controls>
+                        <source class="dvt_f-audio-2" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>GenDF-588k</td>
+                <td><audio controls>
+                        <source class="dvt_tag-audio-0" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>GenDF-651k</td>
+                <td><audio controls>
+                        <source class="dvt_tag-audio-1" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>GenDF-738k</td>
+                <td><audio controls>
+                        <source class="dvt_tag-audio-2" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>CtrlDF-420k</td>
+                <td><audio controls>
+                        <source class="dvt_tag2-audio-0" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>CtrlDF-657k</td>
+                <td><audio controls>
+                        <source class="dvt_tag2-audio-1" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>CtrlDF-773k</td>
+                <td><audio controls>
+                        <source class="dvt_tag2-audio-2" type="audio/wav">
+                        Your browser does not support the audio element.
                     </audio></td>
             </tr>
         </tbody>
     </table>
 
     <div class="table-title">VITS Audio samples</div>
+    <div id="displayTextVITS"></div>
 
     <table>
         <thead>
             <tr>
                 <th class="col-title">Sample</th>
-                <th>Audio file 1</th>
-                <th>Audio file 2</th>
+                <th>Audio file</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>AutoDF-800k</td>
                 <td><audio controls>
-                        <source src="wav\20240516-vits-f-pred\wav-800k\A01M0565_0019636_0028888.wav" type="audio/wav">
-                        Your browser does not support the
-                        audio element.
-                    </audio></td>
-                <td><audio controls>
-                        <source src="wav\20240516-vits-f-pred\wav-800k\A01M0906_0094625_0098470.wav" type="audio/wav">
-                        Your browser does not support the
-                        audio element.
+                        <source class="vits-audio-0" type="audio/wav">
+                        Your browser does not support the audio element.
                     </audio></td>
             </tr>
             <tr>
                 <td>AutoDF-900k</td>
                 <td><audio controls>
-                        <source src="wav\20240516-vits-f-pred\wav-900k\A01M0565_0019636_0028888.wav" type="audio/wav">
-                        Your browser does not support the
-                        audio element.
-                    </audio></td>
-                <td><audio controls>
-                        <source src="wav\20240516-vits-f-pred\wav-900k\A01M0906_0094625_0098470.wav" type="audio/wav">
-                        Your browser does not support the
-                        audio element.
+                        <source class="vits-audio-1" type="audio/wav">
+                        Your browser does not support the audio element.
                     </audio></td>
             </tr>
             <tr>
                 <td>AutoDF-1603k</td>
                 <td><audio controls>
-                        <source src="wav\20240516-vits-f-pred\wav-1603k\A01M0565_0019636_0028888.wav" type="audio/wav">
-                        Your browser
-                        does not support the
-                        audio element.
-                    </audio></td>
-                <td><audio controls>
-                        <source src="wav\20240516-vits-f-pred\wav-1603k\A01M0906_0094625_0098470.wav" type="audio/wav">
-                        Your browser
-                        does not support the
-                        audio element.
+                        <source class="vits-audio-2" type="audio/wav">
+                        Your browser does not support the audio element.
                     </audio></td>
             </tr>
         </tbody>
-        </tbody>
     </table>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
