@@ -29,15 +29,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
             baseDir: 'wav\\test_wavs',
             types: ['0k'],
             displayElementId: 'displayTextDVT'
-        },
-        {
-            name: 'VITS',
-            baseDir: 'wav\\20240516-vits-f-pred',
-            types: ['800k', '900k', '1603k'],
-            displayElementId: 'displayTextVITS'
         }
     ];
-
+    // {
+    //         name: 'VITS',
+    //         baseDir: 'wav\\20240516-vits-f-pred',
+    //         types: ['800k', '900k', '1603k'],
+    //         displayElementId: 'displayTextVITS'
+    //      }
     const filenames = [
         "A01M0565_0019636_0028888.wav",
         "A01M0906_0094625_0098470.wav",

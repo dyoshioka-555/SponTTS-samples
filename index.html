@@ -11,7 +11,8 @@
         }
 
         table {
-            width: 70%;
+            width: 90%;
+            font-size: 18px;
             table-layout: fixed;
             border-collapse: collapse;
             margin: 20px;
@@ -21,12 +22,16 @@
         th,
         td {
             border: 1px solid #888;
-            padding: 10px;
+            padding: 3px;
             text-align: center;
         }
 
         th {
             background-color: #f2f2f2;
+        }
+
+        tbody tr:nth-child(even) td {
+            background-color: #d7d6d6e7;
         }
 
         .col-title {
@@ -55,6 +60,8 @@
             <tr>
                 <th class="col-title">Sample</th>
                 <th>Audio file</th>
+                <th width="150">CER (%) ↓</th>
+                <th width="200">UT-MOS ↑</th>
             </tr>
         </thead>
         <tbody>
@@ -64,6 +71,8 @@
                         <source class="gt-audio-0" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio></td>
+                <td>1.90</td>
+                <td>2.995 ± 0.051</td>
             </tr>
             <tr>
                 <td>Plain-365k</td>
@@ -71,6 +80,8 @@
                         <source class="dvt-audio-0" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio></td>
+                <td>5.72</td>
+                <td>2.567 ± 0.047</td>
             </tr>
             <tr>
                 <td>Plain-658k</td>
@@ -78,6 +89,8 @@
                         <source class="dvt-audio-1" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio></td>
+                <td>4.90</td>
+                <td>2.594 ± 0.050</td>
             </tr>
             <tr>
                 <td>Plain-830k</td>
@@ -85,6 +98,8 @@
                         <source class="dvt-audio-2" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio></td>
+                <td>5.49</td>
+                <td>2.620 ± 0.047</td>
             </tr>
             <tr>
                 <td>AutoDF-590k</td>
@@ -92,6 +107,8 @@
                         <source class="dvt_f-audio-0" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio></td>
+                <td>12.87</td>
+                <td>2.623 ± 0.047</td>
             </tr>
             <tr>
                 <td>AutoDF-755k</td>
@@ -99,6 +116,8 @@
                         <source class="dvt_f-audio-1" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio></td>
+                <td>12.87</td>
+                <td>2.566 ± 0.048</td>
             </tr>
             <tr>
                 <td>AutoDF-818k</td>
@@ -106,6 +125,8 @@
                         <source class="dvt_f-audio-2" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio></td>
+                <td>13.06</td>
+                <td>2.575 ± 0.051</td>
             </tr>
             <tr>
                 <td>GenDF-588k</td>
@@ -113,6 +134,8 @@
                         <source class="dvt_tag-audio-0" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio></td>
+                <td>8.89</td>
+                <td>2.546 ± 0.045</td>
             </tr>
             <tr>
                 <td>GenDF-651k</td>
@@ -120,6 +143,8 @@
                         <source class="dvt_tag-audio-1" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio></td>
+                <td>9.45</td>
+                <td>2.553 ± 0.049</td>
             </tr>
             <tr>
                 <td>GenDF-738k</td>
@@ -127,6 +152,8 @@
                         <source class="dvt_tag-audio-2" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio></td>
+                <td>8.64</td>
+                <td>2.573 ± 0.049</td>
             </tr>
             <tr>
                 <td>CtrlDF-420k</td>
@@ -134,6 +161,8 @@
                         <source class="dvt_tag2-audio-0" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio></td>
+                <td>4.91</td>
+                <td>2.577 ± 0.046</td>
             </tr>
             <tr>
                 <td>CtrlDF-657k</td>
@@ -141,6 +170,8 @@
                         <source class="dvt_tag2-audio-1" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio></td>
+                <td>3.65</td>
+                <td>2.570 ± 0.049</td>
             </tr>
             <tr>
                 <td>CtrlDF-773k</td>
@@ -148,11 +179,13 @@
                         <source class="dvt_tag2-audio-2" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio></td>
+                <td>4.01</td>
+                <td>2.618 ± 0.046</td>
             </tr>
         </tbody>
     </table>
 
-    <div class="table-title">VITS Audio samples</div>
+    <!--<div class="table-title">VITS Audio samples</div>
     <div id="displayTextVITS"></div>
 
     <table>
@@ -160,6 +193,8 @@
             <tr>
                 <th class="col-title">Sample</th>
                 <th>Audio file</th>
+                <th>CER (%) ↓</th>
+                <th>UT-MOS ↑</th>
             </tr>
         </thead>
         <tbody>
@@ -169,6 +204,8 @@
                         <source class="vits-audio-0" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td>AutoDF-900k</td>
@@ -176,6 +213,8 @@
                         <source class="vits-audio-1" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td>AutoDF-1603k</td>
@@ -183,9 +222,11 @@
                         <source class="vits-audio-2" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio></td>
+                <td></td>
+                <td></td>
             </tr>
         </tbody>
-    </table>
+    </table>-->
     <script src="script.js"></script>
 </body>
 
