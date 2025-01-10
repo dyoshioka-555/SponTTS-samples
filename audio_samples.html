@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>テキストスタイル変換+TTS サンプル音声</title>
+    <style>
+        .table-title {
+            font-size: 24px;
+            margin-left: 20px;
+        }
+
+        table {
+            width: 90%;
+            font-size: 18px;
+            table-layout: fixed;
+            border-collapse: collapse;
+            margin: 20px;
+            margin-left: 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #888;
+            padding: 3px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:nth-child(even) td {
+            background-color: #d7d6d6e7;
+        }
+
+        .col-title {
+            width: 20%;
+        }
+
+        audio {
+            width: 100%;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Audio samples from DVT</p>
+
+
+
+
+    <div class="table-title">DVT Audio samples in TST only</div>
+    <div id="displayTextDVT"></div>
+    <button id="prevButton">prev</button>
+    <button id="nextButton">next</button>
+    <table>
+        <thead>
+            <tr>
+                <th width="15%" class="col-title">Sample</th>
+                <th width="45%">Audio file</th>
+                <th width="20%">Average CER (%) ↓</th>
+                <th width="20%">Average UT-MOS ↑</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GT</td>
+                <td><audio controls>
+                        <source class="gt-audio-0" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+                <td>1.90</td>
+                <td>2.995 ± 0.051</td>
+            </tr>
+            <tr>
+                <td>Plain</td>
+                <td><audio controls>
+                        <source class="dvt-audio-0" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+                <td>5.49</td>
+                <td>2.62 ± 0.05</td>
+            </tr>
+            <tr>
+                <td>Auto</td>
+                <td><audio controls>
+                        <source class="dvt_f-audio-0" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+                <td>13.06</td>
+                <td>2.58 ± 0.05</td>
+            </tr>
+            <tr>
+                <td>Symbol</td>
+                <td><audio controls>
+                        <source class="dvt_tag-audio-0" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+                <td>8.64</td>
+                <td>2.57 ± 0.05</td>
+            </tr>
+            <tr>
+                <td>Tag</td>
+                <td><audio controls>
+                        <source class="dvt_tag2-audio-0" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+                <td>4.01</td>
+                <td>2.62 ± 0.05</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="script2.js"></script>
+
+
+    <br>
+
+
+    <div class="table-title">DVT Audio samples in TST+TTS</div>
+    <div id="displayTextDVT2"></div>
+    <button id="prevButton2">prev</button>
+    <button id="nextButton2">next</button>
+    <table>
+        <thead>
+            <tr>
+                <th width="15%" class="col-title">Sample</th>
+                <th width="45%">Audio file</th>
+                <th width="40%">Average CER to Original Fluent Text (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Plain</td>
+                <td><audio controls>
+                        <source class="dvt2-audio2-0" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+                <td>17.98</td>
+
+            </tr>
+            <tr>
+                <td>Auto</td>
+                <td><audio controls>
+                        <source class="dvt2_f-audio2-0" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+                <td>5.67</td>
+
+            </tr>
+            <tr>
+                <td>Symbol</td>
+                <td><audio controls>
+                        <source class="dvt2_tag-audio2-0" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+                <td>21.22</td>
+
+            </tr>
+            <tr>
+                <td>Tag</td>
+                <td><audio controls>
+                        <source class="dvt2_tag2-audio2-0" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+                <td>20.37</td>
+
+            </tr>
+        </tbody>
+    </table>
+    <script src="script3.js"></script>
+</body>
+
+</html>
