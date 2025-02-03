@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>テキストスタイル変換+TTS サンプル音声</title>
+    <title>Audio Samples</title>
     <style>
         .table-title {
             font-size: 24px;
@@ -46,28 +46,68 @@
 </head>
 
 <body>
-    <p>Audio samples from DVT</p>
+    <p>Audio samples from FastSpeech2 and DVT w/o Disfluency Annotation in MOS test</p>
 
-
-
-
-    <div class="table-title">DVT Audio samples in TTS only</div>
-    <div id="displayTextDVT"></div>
-    <button id="prevButton">prev</button>
-    <button id="nextButton">next</button>
+    <div class="table-title">TTS Audio samples w/o Disfluency Annotation</div>
+    <div id="displayTextMOS"></div>
+    <button id="prevButton3">prev</button>
+    <button id="nextButton3">next</button>
     <table>
         <thead>
             <tr>
-                <th width="15%" class="col-title">Sample</th>
-                <th width="45%">Audio file</th>
-                <th width="40%">Average CER (%) ↓</th>
+                <th width="10%" class="col-title">Sample</th>
+                <th width="90%">Audio file</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>GT</td>
                 <td><audio controls>
-                        <source class="gt-audio-0" type="audio/wav">
+                        <source class="gt-audio3-0" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>Fastspeech2</td>
+                <td><audio controls>
+                        <source class="fs2-audio3-0" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+            </tr>
+            <tr>
+                <td>DVT</td>
+                <td><audio controls>
+                        <source class="dvt-audio3-0" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="script4.js"></script>
+
+
+    <br>
+
+
+    <p>Audio samples from DVT with Disfluency Annotation in ABX test</p>
+
+    <div class="table-title">TTS Audio samples with Disfluency Annotation</div>
+    <div id="displayTextDVT"></div>
+    <button id="prevButton">prev</button>
+    <button id="nextButton">next</button>
+    <table>
+        <thead>
+            <tr>
+                <th width="10%" class="col-title">Sample</th>
+                <th width="60%">Audio file</th>
+                <th width="30%">Average CER (%) ↓</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GT</td>
+                <td><audio controls>
+                        <source class="gt-audio2-0" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio></td>
                 <td>1.90</td>
@@ -112,16 +152,16 @@
     <br>
 
 
-    <div class="table-title">DVT Audio samples in TST+TTS</div>
+    <div class="table-title">TST+TTS Audio samples with Disfluency Annotation</div>
     <div id="displayTextDVT2"></div>
     <button id="prevButton2">prev</button>
     <button id="nextButton2">next</button>
     <table>
         <thead>
             <tr>
-                <th width="15%" class="col-title">Sample</th>
-                <th width="45%">Audio file</th>
-                <th width="40%">Average CER to Original Fluent Text (%)</th>
+                <th width="10%" class="col-title">Sample</th>
+                <th width="60%">Audio file</th>
+                <th width="30%">Average CER to Original Fluent Text (%)</th>
             </tr>
         </thead>
         <tbody>
